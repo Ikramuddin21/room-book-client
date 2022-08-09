@@ -1,0 +1,29 @@
+.hero {
+    height: 600px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../../images/hero-banner2.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero > div {
+    width: 60%;
+}
+
+.hero-title {
+    font-size: 65px;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 20px;
+    margin-bottom: 20px;
+    line-height: 30px;
+    color: lightgray;
+}
