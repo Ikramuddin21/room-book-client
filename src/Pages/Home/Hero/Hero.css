@@ -1,22 +1,24 @@
 .hero {
     height: 600px;
+    padding: 10px 0;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../../images/hero-banner2.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../../images/hero-banner.jpg");
     background-size: cover;
     background-position: center;
 }
 
 .hero > div {
-    width: 60%;
+    width: 61%;
 }
 
 .hero-title {
     font-size: 65px;
     margin-bottom: 20px;
+    text-transform: capitalize;
 }
 
 .hero-description {

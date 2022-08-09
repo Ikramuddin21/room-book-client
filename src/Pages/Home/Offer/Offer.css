@@ -1,0 +1,40 @@
+.offer {
+    height: 700px;
+    background: url("../../../images/offerBanner.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.offer-text {
+    max-width: 600px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 5px;
+}
+
+
+.offer-text h1 {
+    font-size: 45px;
+    margin: 10px 0;
+}
+
+.highlight {
+    color: #FF0100;
+}
+
+.offer-price {
+    margin: 10px 0;
+}
+
+.offer-booking-btn {
+    padding: 12px 23px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    background-color: #FF0100;
+    border-radius: 5px;
+    transition: 0.6s;
+}

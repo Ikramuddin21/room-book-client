@@ -1,15 +1,20 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Hero from './Pages/Home/Hero/Hero';
-import Services from './Pages/Home/Services/Services';
+import Booking from './Pages/Booking/Booking';
+import Home from './Pages/Home/Home/Home';
 import Header from './Pages/Shared/Header/Header';
 
 function App() {
   return (
-    <div>
+    <>
       <Header />
-      <Hero />
-      <Services />
-    </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/booking" element={<Booking />} />
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </>
   );
 }
 
