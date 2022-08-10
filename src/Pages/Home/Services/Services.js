@@ -18,6 +18,7 @@ const Services = () => {
             <h2>Our Adventure Room</h2>
             <div className="services">
                 {
+                    !services.length ? <h1>Loading...</h1> :
                     services.map(service => <Service key={service._id} service={service} />)
                 }
             </div>

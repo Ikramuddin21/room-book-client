@@ -17,6 +17,7 @@ const Gallery = () => {
             <h2>Photo Gallery</h2>
             <div className="gallery">
                 {
+                    !images.length ? <h1>Loading...</h1> :
                     images.map(image => <div key={image._id} className="album">
                         <img src={image.img} alt="" />
                     </div>)
