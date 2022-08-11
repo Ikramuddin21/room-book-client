@@ -21,20 +21,6 @@
     margin: 10px 0;
 }
 
-.highlight {
-    color: #FF0100;
-}
-
 .offer-price {
     margin: 10px 0;
-}
-
-.offer-booking-btn {
-    padding: 12px 23px;
-    font-size: 16px;
-    color: white;
-    border: none;
-    background-color: #FF0100;
-    border-radius: 5px;
-    transition: 0.6s;
 }

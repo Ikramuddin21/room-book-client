@@ -13,6 +13,7 @@ const Services = () => {
         axios.get("http://localhost:5000/services")
             .then(res => setServices(res.data))
     }, []);
+
     return (
         <div className="services-container">
             <h2>Our Adventure Room</h2>

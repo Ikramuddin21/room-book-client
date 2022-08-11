@@ -2,6 +2,8 @@ import axios from 'axios';
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
 import MyBooking from '../MyBooking/MyBooking';
 import HeroRoute from '../Shared/HeroRoute/HeroRoute';
 import './MyBookings.css';
@@ -10,6 +12,7 @@ const MyBookings = () => {
 
     const [myBookings, setMyBookings] = useState([]);
     const [services, setServices] = useState([]);
+    const {user} = useAuth();
 
     useEffect(() => {
         axios.get("http://localhost:5000/users")
@@ -26,8 +29,8 @@ const MyBookings = () => {
     const filteredServices = () => {
         let servicesItem = [];
         servicesItem = services.filter(service => {
-            return myBookings.find(item => {
-                return item.serviceId === service._id;
+            return myBookings.find(booking => {
+                return booking.serviceId === service._id && booking.email === user.email;
             })
         })
         return servicesItem;
@@ -39,7 +42,6 @@ const MyBookings = () => {
         if (confirmMess) {
             axios.delete(`http://localhost:5000/users/${id}`)
                 .then(res => {
-                    console.log(res);
                     if (res.data.deletedCount > 0) {
                         const remainingBooking = myBookings.filter(booking => booking.serviceId !== id);
                         setMyBookings(remainingBooking);
@@ -52,10 +54,16 @@ const MyBookings = () => {
         <>
             <HeroRoute title="My Booking" />
             <div className="my-bookings-container">
-                <h1>My All Booking Information</h1>
+            {
+                    !filteredServices().length ? <div>
+                        <h1>Do not information</h1>
+                        <Link to="/"><button className="shared-btn-2 go-back-btn">Go Home</button></Link>
+                    </div> :
+                        <h1>My All Booking Information</h1>
+
+               }
                 <div className="my-bookings">
                     {
-                        !filteredServices().length ? <p>Do not data add.</p> :
                         filteredServices().map(booking => <MyBooking
                             key={booking._id}
                             booking={booking}

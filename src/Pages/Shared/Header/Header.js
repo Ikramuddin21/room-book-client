@@ -22,7 +22,10 @@ const Header = () => {
                         user.email && <li><Link to="/my-booking">My Booking</Link></li>
                     }
                     {
-                        user.email && <li><Link to="/manage-booking">Manage Booking</Link></li>
+                        user.email && <li><Link to="/manage-bookings">Manage Booking</Link></li>
+                    }
+                    {
+                        user.email && <li><Link to="/add-service">Add Service</Link></li>
                     }
                 </ul>
                 <div className="header-right">

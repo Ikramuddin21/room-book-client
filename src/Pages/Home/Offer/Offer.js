@@ -11,7 +11,7 @@ const Offer = () => {
                     <p>7 Days Only</p>
                     <div className="offer-text-bottom">
                         <h2 className="offer-price highlight">$1500</h2>
-                        <button className="offer-booking-btn">Booking</button>
+                        <button className="shared-btn-2">Booking</button>
                     </div>
                 </div>
             </div>

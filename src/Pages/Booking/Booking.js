@@ -16,7 +16,6 @@ const Booking = () => {
     const { id } = useParams();
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-        console.log('data', data);
         axios.post("http://localhost:5000/users", data)
         .then(res => {
             if(res.data.insertedId) {
@@ -43,7 +42,7 @@ const Booking = () => {
                     <p>{service.description}</p>
                 </div>
                 <div className="booking-right">
-                    <form className="booking-form" onSubmit={handleSubmit(onSubmit)}>
+                    <form className="shared-form" onSubmit={handleSubmit(onSubmit)}>
                         <h3>Check Your Activities</h3>
                         <input {...register("userName", { required: true, maxLength: 20 })} defaultValue={emptyField ? "" : user.displayName} />
                         <input {...register("email")} defaultValue={emptyField ? "" : user.email} />
