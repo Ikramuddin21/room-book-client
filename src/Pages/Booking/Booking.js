@@ -32,7 +32,6 @@ const Booking = () => {
             .then(res => setService(res.data))
     }, []);
 
-    console.log(service.title);
     return (
         <>
             <HeroRoute title="Booking" />
@@ -49,10 +48,7 @@ const Booking = () => {
                         <input {...register("userName", { required: true, maxLength: 20 })} defaultValue={emptyField ? "" : user.displayName} />
                         <input {...register("email")} defaultValue={emptyField ? "" : user.email} />
                         <input type="date" {...register("date", { required: true })} />
-                        <input {...register("serviceId")}  defaultValue={emptyField ? "" : service._id || ""} />
-                        <input {...register("title")}  defaultValue={emptyField ? "" : service.title || ""} />
-                        <input {...register("price")}  defaultValue={emptyField ? "" : service.price || ""} />
-                        <input {...register("img")}  defaultValue={emptyField ? "" : service.img || ""} />
+                        <input {...register("serviceId")}  defaultValue={emptyField ? "" : id} />
                         <input {...register("status")} defaultValue={emptyField ? "" : "Pending"} />
                         <button className={success ? "booking-success booking-submit-btn" : "booking-submit-btn"} type="submit">{success ? "Successfully Submitted" : "Submit"}</button>
                     </form>

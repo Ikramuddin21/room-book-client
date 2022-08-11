@@ -1,0 +1,14 @@
+.my-bookings-container {
+    max-width: 1350px;
+    margin: 80px auto;
+    padding: 0 50px;
+    display: grid;
+    place-items: center;
+}
+
+.my-bookings {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px 20px;
+    margin-top: 70px;
+}

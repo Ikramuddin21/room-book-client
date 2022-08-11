@@ -1,0 +1,28 @@
+.my-booking {
+    max-width: 550px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.my-booking-img-area img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.my-booking-text-area {
+    margin-top: 10px;
+}
+
+.my-booking-title {
+    margin-bottom: 10px;
+}
+
+.my-booking-delete {
+    margin-top: 15px;
+    padding: 12px 25px;
+    color: white;
+    font-size: 16px;
+    background-color: #FF0100;
+    border: none;
+    border-radius: 5px;
+}
