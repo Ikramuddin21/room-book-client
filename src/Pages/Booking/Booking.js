@@ -16,7 +16,7 @@ const Booking = () => {
     const { id } = useParams();
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-        axios.post("http://localhost:5000/users", data)
+        axios.post("https://mighty-sands-64586.herokuapp.com/users", data)
         .then(res => {
             if(res.data.insertedId) {
                 setSuccess(true);
@@ -27,7 +27,7 @@ const Booking = () => {
     };
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/service/${id}`)
+        axios.get(`https://mighty-sands-64586.herokuapp.com/service/${id}`)
             .then(res => setService(res.data))
     }, []);
 

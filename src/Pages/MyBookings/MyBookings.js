@@ -15,13 +15,13 @@ const MyBookings = () => {
     const {user} = useAuth();
 
     useEffect(() => {
-        axios.get("http://localhost:5000/users")
+        axios.get("https://mighty-sands-64586.herokuapp.com/users")
             .then(res => {
                 setMyBookings(res.data);
             })
 
         // all services
-        axios.get("http://localhost:5000/services")
+        axios.get("https://mighty-sands-64586.herokuapp.com/services")
             .then(res => setServices(res.data))
     }, []);
 
@@ -40,7 +40,7 @@ const MyBookings = () => {
     const handleDeleteBooking = id => {
         const confirmMess = window.confirm("Are You Want to Delete?");
         if (confirmMess) {
-            axios.delete(`http://localhost:5000/users/${id}`)
+            axios.delete(`https://mighty-sands-64586.herokuapp.com/users/${id}`)
                 .then(res => {
                     if (res.data.deletedCount > 0) {
                         const remainingBooking = myBookings.filter(booking => booking.serviceId !== id);

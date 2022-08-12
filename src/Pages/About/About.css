@@ -1,0 +1,26 @@
+.about {
+    max-width: 1350px;
+    margin: 80px auto;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+}
+
+.about-left {
+    width: 55%;
+}
+
+.about-left img {
+    border-radius: 5px;
+    width: 100%;
+}
+
+.about-right {
+    width: 45%;
+    margin-left: 20px;
+}
+
+.about-right p {
+    margin-top: 15px;
+    line-height: 25px;
+}

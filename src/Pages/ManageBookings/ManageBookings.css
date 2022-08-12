@@ -1,7 +1,7 @@
 .manage-bookings-container {
     max-width: 1350px;
     margin: 80px auto;
-    padding: 0 20px;
+    padding: 0 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,19 +13,23 @@
 }
 
 .manage-booking {
-    width: 900px;
+    max-width: 900px;
     height: 70px;
     margin-top: 10px;
-    padding: 5px;
+    padding: 5px 15px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
     color: white;
     border-radius: 5px;
     background-color: #FF0100;
 }
 
+.manage-booking span {
+    margin: 0 10px;
+}
+
 .manage-bookings button {
+    margin: 0 10px;
     padding: 10px 15px;
     border: none;
     border-radius: 5px;

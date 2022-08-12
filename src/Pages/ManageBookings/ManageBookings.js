@@ -11,7 +11,7 @@ const ManageBookings = () => {
     const [manageBookings, setManageBookings] = useState([]);
 
     useEffect(() => {
-        axios.get("http://localhost:5000/users")
+        axios.get("https://mighty-sands-64586.herokuapp.com/users")
             .then(res => {
                 setManageBookings(res.data)
             })
@@ -38,7 +38,7 @@ const ManageBookings = () => {
     const handleDeleteUser = email => {
         const confirmMess = window.confirm("Are you want to delete user");
         if (confirmMess) {
-            axios.delete(`http://localhost:5000/users?email=${email}`)
+            axios.delete(`https://mighty-sands-64586.herokuapp.com/users?email=${email}`)
                 .then(res => {
                     if (res.data.deletedCount > 0) {
                         setManageUsers([]);
